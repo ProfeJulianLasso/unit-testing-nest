@@ -3,13 +3,13 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 // Configurations
-import { PostgreSQLConfig } from './configs/postgresql.config';
+import { PostgreSQLConfig } from './configs';
 
 // Entities
-import { UserEntity } from './entities/user.entity';
+import { UserEntity } from './entities';
 
 // Repositories
-import { UserRepository } from './repositories/user/user.repository';
+import { UserRepository } from './repositories';
 
 @Module({
   imports: [
