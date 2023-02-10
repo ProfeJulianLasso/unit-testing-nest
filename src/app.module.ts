@@ -4,13 +4,13 @@ import { ConfigModule } from '@nestjs/config';
 import { join } from 'path';
 
 // Modules
-import { DatabasesModule } from './modules/databases/databases.module';
+import { DatabasesModule } from './modules/databases';
 
 // Controllers
-import { AppController } from './controllers/app/app.controller';
+import { AppController, TransactionalController } from './controllers';
 
 // Services
-import { AppService } from './services/app/app.service';
+import { AppService, TransactionalService } from './services';
 
 @Module({
   imports: [
@@ -24,7 +24,7 @@ import { AppService } from './services/app/app.service';
     }),
     DatabasesModule
   ],
-  controllers: [AppController],
-  providers: [AppService]
+  controllers: [AppController, TransactionalController],
+  providers: [AppService, TransactionalService]
 })
 export class AppModule {}

@@ -9,14 +9,14 @@ import { PostgreSQLConfig } from './configs';
 import { UserEntity } from './entities';
 
 // Repositories
-import { UserRepository } from './repositories';
+import { UserRepository, UserTransactionRepository } from './repositories';
 
 @Module({
   imports: [
     TypeOrmModule.forRootAsync({ useClass: PostgreSQLConfig }),
     TypeOrmModule.forFeature([UserEntity])
   ],
-  providers: [UserRepository],
-  exports: [TypeOrmModule, UserRepository]
+  providers: [UserRepository, UserTransactionRepository],
+  exports: [TypeOrmModule, UserRepository, UserTransactionRepository]
 })
 export class DatabasesModule {}
