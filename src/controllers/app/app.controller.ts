@@ -7,16 +7,6 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    const response = [
-      'uno',
-      'dos',
-      'tres',
-      'cuatro',
-      'cinco',
-      'seis',
-      'siete',
-      'ocho',
-    ];
     return this.appService.getHello();
   }
 }
