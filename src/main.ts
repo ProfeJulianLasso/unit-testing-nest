@@ -10,6 +10,7 @@ import { PipeValidator } from './configs';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors();
   app.setGlobalPrefix('api');
   app.useGlobalPipes(new ValidationPipe(PipeValidator));
   await app.listen(3000);

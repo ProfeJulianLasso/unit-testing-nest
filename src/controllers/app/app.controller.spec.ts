@@ -61,6 +61,7 @@ describe('AppController', () => {
 
       // Assert
       expect(appService.findAll).toBeCalled();
+      expect(appService.findAll).toBeCalledTimes(1);
       expect(result).toEqual(expected);
     });
 
