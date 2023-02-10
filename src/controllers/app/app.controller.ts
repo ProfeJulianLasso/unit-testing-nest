@@ -18,18 +18,27 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  findAll(): Promise<UserEntity[]> {
-    return this.appService.findAll();
+  async findAll(): Promise<{ length: number; data: UserEntity[] }> {
+    const data = await this.appService.findAll();
+    const answer = { length: data.length, data };
+    return answer;
   }
 
   @Get(':id')
-  findOneById(@Param('id', ParseUUIDPipe) id: string): Promise<UserEntity> {
-    return this.appService.findOneById(id);
+  async findOneById(
+    @Param('id', ParseUUIDPipe) id: string
+  ): Promise<{ data: UserEntity }> {
+    const answer = { data: await this.appService.findOneById(id) };
+    return answer;
   }
 
   @Post()
-  createUser(@Body() user: NewUserDTO): Promise<UserEntity> {
-    return this.appService.register(user);
+  async createUser(
+    @Body() user: NewUserDTO
+  ): Promise<{ success: boolean; data: UserEntity }> {
+    const data = await this.appService.register(user);
+    const answer = { success: true, data };
+    return answer;
   }
 
   @Put(':id')
