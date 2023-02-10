@@ -49,7 +49,7 @@ export class AppController {
   }
 
   @Delete(':id')
-  deleteUser(id: string): Promise<UserEntity> {
+  deleteUser(@Param('id', ParseUUIDPipe) id: string): Promise<UserEntity> {
     return this.appService.delete(id);
   }
 }
