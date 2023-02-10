@@ -1,0 +1,115 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "UnitTesting",
+    "dateExported": "2023-02-10T07:16:25.787Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "cb31d75f-1785-457d-a782-971c091f9607",
+            "colId": "8b5bea39-2ff9-4b5e-bebc-39be69fb4518",
+            "containerId": "",
+            "name": "Find all",
+            "url": "/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-02-10T06:51:56.114Z",
+            "modified": "2023-02-10T06:54:08.212Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "094abd19-3f04-4308-ba3a-bfb8fb8e57e7",
+            "colId": "8b5bea39-2ff9-4b5e-bebc-39be69fb4518",
+            "containerId": "",
+            "name": "Find by ID",
+            "url": "/abed3d4e-fbc3-4c24-991f-cbbe07459a1b",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-02-10T06:52:41.101Z",
+            "modified": "2023-02-10T07:05:17.857Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1de81512-989a-4f95-9d7c-23ca884547f9",
+            "colId": "8b5bea39-2ff9-4b5e-bebc-39be69fb4518",
+            "containerId": "",
+            "name": "New user",
+            "url": "/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-02-10T06:54:41.522Z",
+            "modified": "2023-02-10T07:05:01.230Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Andres Figueroa\",\n  \"email\": \"julian.figueroa@gmail.com\",\n  \"phone\": \"2345678965\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "20429ad6-dedd-4e35-8bf0-e71595e7b8cd",
+            "colId": "8b5bea39-2ff9-4b5e-bebc-39be69fb4518",
+            "containerId": "",
+            "name": "Update user",
+            "url": "/abed3d4e-fbc3-4c24-991f-cbbe07459a1b",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-02-10T07:09:23.986Z",
+            "modified": "2023-02-10T07:11:35.453Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Mario Verindo\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e201e4b0-3f4d-4955-9007-237ffca12516",
+            "colId": "8b5bea39-2ff9-4b5e-bebc-39be69fb4518",
+            "containerId": "",
+            "name": "Update user",
+            "url": "/abed3d4e-fbc3-4c24-991f-cbbe07459a1b",
+            "method": "PATCH",
+            "sortNum": 50000,
+            "created": "2023-02-10T07:11:20.604Z",
+            "modified": "2023-02-10T07:11:59.946Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Diego Bolaños\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2b68387e-6f56-4c66-a053-f81e96db70fb",
+            "colId": "8b5bea39-2ff9-4b5e-bebc-39be69fb4518",
+            "containerId": "",
+            "name": "Delete user",
+            "url": "/abed3d4e-fbc3-4c24-991f-cbbe07459a1b",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-02-10T07:12:28.021Z",
+            "modified": "2023-02-10T07:12:40.417Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "headers": [],
+        "tests": [],
+        "options": {
+            "baseUrl": "http://localhost:3000/api"
+        }
+    }
+}
