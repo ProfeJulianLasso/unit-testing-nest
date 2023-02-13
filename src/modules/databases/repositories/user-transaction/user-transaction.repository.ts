@@ -30,6 +30,11 @@ export class UserTransactionRepository {
     await queryRunner.startTransaction();
     try {
       const answer = await queryRunner.manager.save(user);
+      // const answer = await queryRunner.manager.save(user);
+      // const answer = await queryRunner.manager.save(user);
+      // const answer = await queryRunner.manager.save(user);
+      // const answer = await queryRunner.manager.save(user);
+      // const answer = await queryRunner.manager.save(user);
       await queryRunner.commitTransaction();
       return answer;
     } catch (err) {
