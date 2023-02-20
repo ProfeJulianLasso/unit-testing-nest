@@ -12,6 +12,12 @@ import { AppController, TransactionalController } from './controllers';
 // Services
 import { AppService, TransactionalService } from './services';
 
+// Guards
+import { EjemploGuard } from './guards';
+
+// Interceptors
+import { EjemploSalidaInterceptor } from './interceptors';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -25,6 +31,11 @@ import { AppService, TransactionalService } from './services';
     DatabasesModule
   ],
   controllers: [AppController, TransactionalController],
-  providers: [AppService, TransactionalService]
+  providers: [
+    AppService,
+    TransactionalService,
+    EjemploGuard,
+    EjemploSalidaInterceptor
+  ]
 })
 export class AppModule {}
