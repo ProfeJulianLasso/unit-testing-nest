@@ -64,11 +64,9 @@ describe('EjemploSalidaInterceptor', () => {
 
     // Act
     interceptor.intercept(context, next).subscribe({
-      next: (value) => {
-        // Assert
-        expect(value).not.toEqual({ modificado: data + '!' });
-        done();
-      }
+      // Assert
+      next: (value) => expect(value).not.toEqual({ modificado: data + '!' }),
+      complete: () => done()
     });
   });
 });
